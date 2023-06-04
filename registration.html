@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="lv">
+
+<Head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ESSVE</title>
+    <link rel="stylesheet" href="style.css">
+</Head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="green-square"></div>
+            <img class="img-fluid" src="atteli/logo-essve.png" alt="alternative" />
+        </div>
+        <div class="navigation">
+            <span class="autorizacija">Reģistrācija</span>
+            <div class="green-line"></div>
+        </div>
+        <div class="language">
+            <span class="lv">LV</span>
+        </div>
+    </header>
+
+    <div class="wrapper-registration">
+        <div class="form-box login">
+            <form action="process-signup.php" method="post">
+                <div class="input-box-text">
+                    <input type="text" name="Name" required placeholder="Vārds">
+                </div>
+                <div class="input-box-text">
+                    <input type="text" name="Surname" required placeholder="Uzvārds">
+                </div>
+                <div class="input-box-text">
+                    <input type="text" name="username" required placeholder="Lietotājvārds">
+                </div>
+                <div class="input-box-password-registration">
+                    <input type="password" name="pwd" required placeholder="Parole">
+                </div>
+                <div class="input-box-password-registration">
+                    <input type="password" name="pwdrepeat" required placeholder="Apstiprināt paroli">
+                </div>
+                <div class="input-box-email-registration">
+                    <input type="email" name="email" required placeholder="Lietotājvārds">
+                </div>
+                <div class="input-box-text">
+                    <input type="text" name="phone" required placeholder="Tālruņa nr.">
+                </div>
+                <div class="input-box-text">
+                    <input type="text" name="adress" required placeholder="Adrese">
+                </div>
+                <button type="submit" class="btn">Reģistrēties</button>
+            </form>
+
+        </div>
+    </div>
+    <script src="script.js"></script>
+
+</html>
