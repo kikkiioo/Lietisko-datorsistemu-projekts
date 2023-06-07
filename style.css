@@ -17,10 +17,27 @@
 }
 
 .profile-header {
+    position: fixed;
+    background-color: white;
+    width: 100%;
+    padding: 20px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 99;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    overflow: hidden;
+    height: 180px;
+}
+
+.reg-header {
+    position: absolute;
     top: 0;
     left: 0;
     width: 100%;
-    padding: 20px 100px;
+    padding: 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -52,12 +69,28 @@
     text-align: center;
 }
 
+.profile-bold {
+    font-size: 35px;
+    font-weight: bold;
+    text-align: center;
+}
+
 .green-line {
     position: absolute;
     background-color: #00644C;
     width: 255px;
     height: 5px;
     bottom: 30px;
+}
+
+.green-line-prof {
+    position: absolute;
+    height: 2px;
+    width: 300px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-color: #00644C;
+    transform: translateY(-50%);
 }
 
 .lv {
@@ -216,22 +249,32 @@
     color: #fff;
 }
 
-
-/* footer styles */
+.btn-log-in {
+    width: 100%;
+    height: 45px;
+    margin-top: 15px;
+    background-color: #00644C;
+    border-radius: 10px;
+    border-color: transparent;
+    cursor: pointer;
+    font-size: 20px;
+    color: #fff;
+}
 
 footer {
     width: 100%;
-    height: 320px;
-    padding: 5%;
     background-color: #00644C;
     color: #fff;
     display: flex;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    flex-shrink: 0;
     justify-content: center;
     align-items: center;
+    position: fixed;
+    bottom: 0px;
+    height: 250px;
+    left: 0px;
+    right: 0px;
+    padding: 5%;
+    overflow: hidden;
 }
 
 .footer div {
@@ -340,6 +383,7 @@ footer .col-4 h3 {
     align-items: center;
     height: 100vh;
     overflow-y: auto;
+    top: 0;
 }
 
 .form-box.login {
@@ -364,6 +408,7 @@ footer .col-4 h3 {
     align-items: center;
     background-color: #00644C;
     color: white;
+    cursor: pointer;
 }
 
 .nav-item:first-child {
@@ -404,11 +449,12 @@ footer .col-4 h3 {
     display: flex;
     align-items: center;
     margin-right: 75px;
+    margin-top: 10px;
 }
 
 .latvian {
     margin-right: 8px;
-    font-size: 25px;
+    font-size: 22px;
 }
 
 .euro {
@@ -418,19 +464,254 @@ footer .col-4 h3 {
 .line-container {
     display: flex;
     justify-content: center;
+    position: absolute;
+    left: 0;
+    bottom: 0px;
+    width: 100%;
+    margin-top: 160px;
 }
 
 .horizontal-line {
     border: none;
     height: 3px;
-    margin: 10px;
+    margin-top: 100px;
     background-color: #00644C;
     width: 100%;
 }
 
+.profile-information-row {
+    display: flex;
+    align-items: flex-start;
+}
+
+.column-profile {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-right: 50px;
+    margin-top: 25px;
+}
+
 .profile-avatar {
-    width: 100px;
-    height: 100px;
+    width: 150px;
+    height: 150px;
     border-radius: 50%;
     object-fit: cover;
+}
+
+.add-pic-button {
+    border: 2px solid green;
+    background-color: white;
+    color: green;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.add-pic-button:hover {
+    border: 2px solid green;
+    background-color: green;
+    color: white;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.remove-pic-button {
+    margin-top: 5px;
+    border: 2px solid red;
+    background-color: white;
+    color: red;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.remove-pic-button:hover {
+    background-color: red;
+    color: white;
+}
+
+.column-pic-buttons {
+    padding: 10px;
+    margin-top: 35px;
+    margin-left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.column-pic-requirments {
+    display: flex;
+    flex-direction: column;
+    background-color: #E6E6E6;
+    align-items: flex-start;
+    margin-left: 20px;
+    padding: 10px;
+    width: 450px;
+}
+
+.profile1 {
+    display: flex;
+    flex-direction: column;
+    border: 2px solid #E6E6E6;
+    background-color: white;
+    padding: 10px;
+    margin: 10px;
+    margin-left: 30px;
+    max-height: calc(100vh - 150px);
+    overflow-y: auto;
+    width: -webkit-fill-available;
+}
+
+.profile2 {
+    display: flex;
+    flex-direction: column;
+    border: 2px solid #E6E6E6;
+    background-color: white;
+    padding: 10px;
+    margin: 10px;
+    margin-left: 30px;
+    width: -webkit-fill-available;
+    max-height: calc(100vh - 150px);
+    overflow-y: auto;
+    margin-bottom: 260px;
+}
+
+.scroll-viewer {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    overflow: auto;
+}
+
+.column-pic-requirments p {
+    margin-bottom: 10px;
+}
+
+.prof-body {
+    position: absolute;
+    top: 200px;
+    bottom: 250px;
+    left: 0px;
+    right: 0px;
+    overflow: 100%;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    padding-bottom: 250px;
+    /* Adjust the value as needed */
+    box-sizing: border-box;
+}
+
+.profile-input {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    outline: none;
+    width: 200px;
+    margin: 10px;
+}
+
+.input-box {
+    flex-grow: 1;
+}
+
+label {
+    margin: 10px;
+    font-size: 18px;
+}
+
+.profile-column {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    overflow: auto;
+    flex: 1;
+}
+
+.setting-column {
+    box-sizing: border-box;
+    width: 35%;
+}
+
+.list-settings {
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+}
+
+.combobox {
+    width: -webkit-fill-available;
+    height: 50px;
+    padding: 5px;
+    margin: 20px;
+    font-size: 24px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.profile-avatar-small {
+    height: 55px;
+    margin: 15px;
+    object-fit: cover;
+}
+
+.currency-location {
+    height: 35px;
+    margin: 15px;
+    object-fit: cover;
+}
+
+.profile-small {
+    display: flex;
+    flex-direction: column;
+    margin-left: 25px;
+    align-items: center;
+    justify-content: center;
+}
+
+.list-settings p {
+    background-repeat: no-repeat;
+    background-position: left center;
+    padding-left: 40px;
+    background-size: 15px 15px;
+}
+
+.list-settings span {
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-position: 10px center;
+    height: 60px;
+    margin-top: 5px;
+    background-size: 20px 20px;
+}
+
+.list-settings span:hover {
+    border-left: 3px solid black;
+    cursor: pointer;
+}
+
+.container-reg {
+    margin-left: 0;
+    position: relative;
+    float: left;
+    margin-right: 55px;
+    display: flex;
+    align-items: center;
+}
+
+.profile-row {
+    margin-bottom: 15px;
+}
+
+.profile-input:disabled {
+    background-color: #f4f4f4;
+    color: #999999;
+    /* Add more styles as needed */
 }
